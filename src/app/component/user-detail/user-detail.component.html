@@ -1,1 +1,18 @@
-<p>user-detail works!</p>
+<div class="row justify-content-md-center" *ngFor="let defText of defaultTexts">
+
+  <div class=".col-6 .col-md-4">
+    <button
+    class="btn btn-outline-danger position-relative"
+    type="button"
+    (click)="onButtonClick(defText.text)">
+    {{ defText.text }}
+
+      <span class="text position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light border border-dark"
+        (click)="onBadgeClick(defText)">
+        -
+        <span class="visually-hidden"></span>
+      </span>
+
+    </button>
+  </div>
+</div>

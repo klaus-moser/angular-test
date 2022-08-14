@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-test';
 
+  title = 'angular-test';
   rootFirstName = "Max";
   rootLastName = "Musermann";
+  rootText = "...";
 
   onFirstNameChanged(newFirstName: any) {
     this.rootFirstName = newFirstName;
@@ -17,5 +18,9 @@ export class AppComponent {
 
   onLastNameChanged(newLastName: any) {
     this.rootLastName = newLastName;
+  }
+
+  onTextChanged(newText: any) {
+    this.rootText = newText;
   }
 }

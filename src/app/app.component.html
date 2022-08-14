@@ -1,6 +1,10 @@
 <h1>HELLO WORLD!</h1>
 
 <div>
-  <app-user-component></app-user-component>
-  <app-user-component [firstName]="'KLAUS'" [lastName]="'MOSER'"></app-user-component>
+  <app-user-component
+    [firstName]="rootFirstName"
+    [lastName]="rootLastName"
+    (firstNameChanged)="onFirstNameChanged($event)"
+    (lastNameChanged)="onLastNameChanged($event)">
+  </app-user-component>
 </div>

@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-test';
+
+  rootFirstName = "Max";
+  rootLastName = "Musermann";
+
+  onFirstNameChanged(newFirstName: any) {
+    this.rootFirstName = newFirstName;
+  }
+
+  onLastNameChanged(newLastName: any) {
+    this.rootLastName = newLastName;
+  }
 }

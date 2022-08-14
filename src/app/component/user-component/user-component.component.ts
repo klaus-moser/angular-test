@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user-component',
@@ -7,15 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UserComponentComponent implements OnInit {
 
-  @Input() firstName = "Max";
-  @Input() lastName = "Mustermann";
+  @Input() firstName: string = "Max";
+  @Input() lastName: string = "Mustermann";
+  @Output() firstNameChanged = new EventEmitter<string>();
+  @Output() lastNameChanged = new EventEmitter<string>();
 
   onFirstNameInput(event: any) {
-    this.firstName = event.target.value;
+    // this.firstName = event.target.value;
+    this.firstNameChanged.emit(event.target.value);
   }
 
   onLastNameInput(event: any) {
-    this.lastName = event.target.value;
+    // this.lastName = event.target.value;
+    this.lastNameChanged.emit(event.target.value);
   }
 
   constructor() { }

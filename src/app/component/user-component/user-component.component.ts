@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user-component',
@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponentComponent implements OnInit {
 
-  firstName = "Max";
-  lastName = "Mustermann";
+  @Input() firstName = "Max";
+  @Input() lastName = "Mustermann";
 
   onFirstNameInput(event: any) {
     this.firstName = event.target.value;

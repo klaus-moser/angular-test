@@ -5,7 +5,7 @@
   <input type="text" aria-label="First name" class="form-control"
     (input)="onFirstNameInput($event)" [value]="firstName">
   <input type="text" aria-label="Last name" class="form-control"
-    (input)="onLastNameInput($event)" [value]="lastName">
+    [(ngModel)]="lastName">
 </div>
 
 <p>The user-component works, {{ firstName }} {{ lastName }}!</p>

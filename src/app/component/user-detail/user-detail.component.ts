@@ -33,9 +33,10 @@ export class UserDetailComponent implements OnInit {
   onBadgeClick(event: any) {
     console.log("filter buttons")
     this.defaultTexts = this.defaultTexts.filter(a => a != event);
+    this.textChanged.emit(this.rootText) // Reset input to "..."
   }
 
-  rootText: string;
+  rootText: string = "...";
   @Output() textChanged = new EventEmitter<string>();
 
   onButtonClick(buttonText: any) {

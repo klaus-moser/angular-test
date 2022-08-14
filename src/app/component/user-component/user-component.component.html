@@ -1,0 +1,9 @@
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">First and last name</span>
+  </div>
+  <input type="text" aria-label="First name" class="form-control" (input)="onFirstNameInput($event)">
+  <input type="text" aria-label="Last name" class="form-control" (input)="onLastNameInput($event)">
+</div>
+
+<p>The user-component works, {{ firstName }} {{ lastName }}!</p>
